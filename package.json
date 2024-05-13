@@ -4,14 +4,15 @@
   "license": "MIT",
   "dependencies": {
     "@astrojs/markdoc": "^0.8.0",
+    "@astrojs/netlify": "^5.2.1",
     "@astrojs/react": "^3.0.7",
+    "@keystatic/astro": "^5.0.0",
+    "@keystatic/core": "^0.5.14",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.0.11",
     "astro": "^4.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@keystatic/astro": "^5.0.0",
-    "@keystatic/core": "^0.5.14"
+    "react-dom": "^18.2.0"
   },
   "scripts": {
     "dev": "astro dev",
