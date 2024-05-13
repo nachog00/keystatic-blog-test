@@ -36,8 +36,8 @@ const posts = defineCollection({
 const projects = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
-    cover: image().required(),
+    cover: image(),
   }),
 });
 
-export const collections = { posts };
+export const collections = { posts , projects };

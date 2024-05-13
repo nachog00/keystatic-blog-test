@@ -151,12 +151,19 @@ declare module 'astro:content' {
 } & { render(): Render[".mdoc"] };
 };
 "projects": {
-"proyecto-1.mdoc": {
-	id: "proyecto-1.mdoc";
-  slug: "proyecto-1";
+"hola-que-tal.mdoc": {
+	id: "hola-que-tal.mdoc";
+  slug: "hola-que-tal";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".mdoc"] };
+"segundo-projecto.mdoc": {
+	id: "segundo-projecto.mdoc";
+  slug: "segundo-projecto";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".mdoc"] };
 };
 

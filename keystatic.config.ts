@@ -35,8 +35,8 @@ export default config({
         title: fields.slug({ name: { label: 'Title' } }),
         cover: fields.image({
           label: 'Cover',
-          directory: 'public/assets/images/projects',
-          publicPath: '/assets/images/projects/',
+          directory: 'src/assets/images/projects',
+          publicPath: '../../assets/images/projects/',
         }),
         content: fields.document({
           label: 'Content',
@@ -45,7 +45,7 @@ export default config({
           links: true,
           images: {
             directory: 'src/assets/images/projects',
-            publicPath: '../../assets/images/projects/',
+            publicPath: '@/assets/images/projects/',
           },
         }),
       },
