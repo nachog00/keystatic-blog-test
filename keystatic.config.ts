@@ -3,7 +3,10 @@ import { config, fields, collection } from '@keystatic/core';
 export default config({
   storage: {
     kind: 'github',
-    repo: `${process.env.KS_REPO_OWNER}/${process.env.KS_REPO_SLUG}`,
+    repo: {
+      owner: 'nachog00',
+      name: 'keystatic-blog-test',
+    }
   },
   collections: {
     // ------- POSTS
