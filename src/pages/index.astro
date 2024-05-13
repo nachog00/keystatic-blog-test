@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
 const posts = await getCollection('posts');
+const projects = await getCollection('projects');
 ---
 
 <Layout title="Keystatic & Astro's Content Collections">
@@ -21,6 +22,16 @@ const posts = await getCollection('posts');
         posts.map(post => (
           <li>
             <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <h2>Projects</h2>
+    <ul>
+      {
+        projects.map(project => (
+          <li>
+            <a href={`/projects/${project.slug}`}>{project.data.title}</a>
           </li>
         ))
       }
