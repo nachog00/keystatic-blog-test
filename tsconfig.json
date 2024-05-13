@@ -4,4 +4,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
   },
+  "include": [
+    "src/**/*.{astro,js,jsx,ts,tsx}",
+    "environment.d.ts",
+  ]
 }
