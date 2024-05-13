@@ -5,6 +5,7 @@ export default config({
     kind: 'local',
   },
   collections: {
+    // ------- POSTS
     posts: collection({
       label: 'Posts',
       slugField: 'title',
@@ -24,5 +25,31 @@ export default config({
         }),
       },
     }),
+    // ------- PROJECTS
+    projects: collection({
+      label: 'Projects',
+      slugField: 'title',
+      path: 'src/content/projects/*',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        cover: fields.image({
+          label: 'Cover',
+          directory: 'public/assets/images/projects',
+          publicPath: '/assets/images/projects/',
+        }),
+        content: fields.document({
+          label: 'Content',
+          formatting: true,
+          dividers: true,
+          links: true,
+          images: {
+            directory: 'src/assets/images/projects',
+            publicPath: '../../assets/images/projects/',
+          },
+        }),
+      },
+    }),
+
   },
 });
